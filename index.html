@@ -12,6 +12,45 @@
   </head>
   <body>
     <main class="container">
+      <div class="task">
+        Active list
+        <div>
+          select all
+          <input type="checkbox" id="selectAll" onclick="selectAllTasks()" />
+        </div>
+      </div>
+
+      <input
+        id="input"
+        type="text"
+        placeholder="название задачи"
+        onkeypress="handle(event)"
+      />
+      <button onclick="addTask()">создать</button>
+      <button
+        class="deleteButtonHidden"
+        id="delete"
+        onclick="deleteTask()"
+        style="background-color: tomato"
+      >
+        удалить
+      </button>
+      <div id="inputWarning" class="deletedTasksListHidden">
+        <span style="color: red">Please set some value for task</span>
+      </div>
+      <div class="deletedList">
+        <div class="deletedListHead">
+          Deleted list
+          <span
+            id="icon"
+            class="material-symbols-outlined"
+            onclick="changeBasketStyle()"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <div id="deletedTasksList" class="basketStyle"></div>
+      </div>
     </main>
     <script src="./app/importJSfiles.js"></script>
   </body>
