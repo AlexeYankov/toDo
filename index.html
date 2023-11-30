@@ -11,50 +11,43 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
   </head>
   <body>
-      <div class="task">
-        Active list
-        <div>
-          choose todos settings list
-          <!-- <input type="select" id="selectAll" onclick="selectAllTasks()" /> -->
-          <select name="isDone" id="isDone">
-            <option value="all">All</option>
-            <option value="isDone">Done</option>
-            <option value="notDone">To do</option>
-          </select>
-        </div>
-      </div>
+    <div class="task">
+      Enter some text
+    </div>
 
-      <input
-        id="input"
-        type="text"
-        placeholder="название задачи"
-        onkeypress="handle(event)"
-      />
-      <button onclick="addTask()">создать</button>
-      <button
-        class="deleteButtonHidden"
-        id="delete"
-        onclick="deleteTask()"
-        style="background-color: tomato"
-      >
-        удалить
-      </button>
-      <div id="inputWarning" class="deletedTasksListHidden">
-        <span style="color: red">Please set some value for task</span>
-      </div>
-      <!-- <div class="deletedList">
-        <div class="deletedListHead">
-          Deleted list
-          <span
-            id="icon"
-            class="material-symbols-outlined"
-            onclick="changeBasketStyle()"
-          >
-            expand_circle_down
-          </span>
-        </div>
-        <div id="deletedTasksList" class="basketStyle"></div>
-      </div> -->
+    <input
+      id="input"
+      type="text"
+      placeholder="название задачи"
+    />
+    
+    <input
+      id="removeElement"
+      type="number"
+      placeholder="number задачи"
+    />
+    <button onclick="logInput()">log input</button>
+    <button onclick="resetInput()">clear input</button>
+    <button id="block" onclick="blockInput()">block input</button>
+    <button id="hide" onclick="hideInput()">hide input</button>
+    <button onclick="getRandomColorForInput()">random color</button>
+    <button onclick="addTask()">create block</button>
+    <button onclick="removeTask()">remove last block</button>
+    <button onclick="removeBlock()">remove Nth block</button>
+    <button
+      class="deleteButtonHidden"
+      id="delete"
+      onclick="deleteTask()"
+      style="background-color: tomato"
+    >
+      удалить
+    </button>
+    <div id="inputWarning" class="deletedTasksListHidden">
+      <span style="color: red">Please set some value for task</span>
+    </div>
+    <main id="main">
+      
+    </main>
     <script src="./app/importJSfiles.js"></script>
   </body>
 </html>
